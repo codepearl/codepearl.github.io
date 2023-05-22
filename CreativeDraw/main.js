@@ -211,3 +211,10 @@ function erase()
     canvas.backgroundColor = '#ffffff';
     coords = [];
 }
+
+function save()
+{
+    console.log('export image');
+    if (!fabric.Canvas.supports('toDataURL')) 
+     alert('This browser doesn\'t provide means to serialize canvas to an image');
+}
