@@ -244,6 +244,9 @@ function no()
     if (selectedNum >= 4)
     {
         console.log('submit to server');
+        var keyword = 'something';
+        var src = 'submit/' + keyword + '.png';
+        fabric.Canvas.supports(src);
     }
     else check();
 }
