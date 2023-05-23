@@ -244,6 +244,10 @@ function no()
     if (selectedNum >= 4)
     {
         console.log('submit to server');
+        const element = document.getElementById('target');
+        var str = '발전을 위해서 무엇을 그렸는지 알려주세요';
+        element.innerText = str;
+        //keyword를 입력받는게 필요함
         var keyword = 'something';
         var src = 'submit/' + keyword + '.png';
         fabric.Canvas.supports(src);
@@ -257,6 +261,6 @@ function check()
     selected = candidate[selectedNum];
     console.log(selected);
     const element = document.getElementById('target');
-    var str = '지금 그린것이 ' + selected + '가 맞나요?'
+    var str = '지금 그린 것이 ' + selected + '가 맞나요?'
     element.innerText = str;
 }
