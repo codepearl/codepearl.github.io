@@ -256,5 +256,6 @@ function check()
     selectedNum = selectedNum + 1;
     selected = candidate[selectedNum];
     console.log(selected);
-    str = '지금 그린것이 ' + selected + '가 맞나요?';
+    const element = document.getElementById('target');
+    element.innerHTML = '지금 그린것이 ' + selected + '가 맞나요?';
 }
