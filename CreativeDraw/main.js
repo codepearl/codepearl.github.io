@@ -6,6 +6,8 @@ var coords = [];
 var mousePressed = false;
 var mode;
 var selected;
+var candidate = [];
+var selectedNum;
 
 
 $(function()
@@ -34,7 +36,9 @@ $(function()
 
 function setTable(top5, probs)
 {
-    selected = top5[0]
+    candidate = top5;
+    selectedNum = -1;
+    check();
     for (var i = 0; i < top5.length; i++)
     {
         let sym = document.getElementById('sym' + (i + 1))
@@ -221,15 +225,31 @@ function save()
      alert('This browser doesn\'t provide means to serialize canvas to an image');
 }
 
-function change()
+function yes()
 {
     console.log('change image');
     console.log(selected);
     var img = document.createElement("img");
-    var src = 'img/' + selcted + '.png';
+    var src = 'img/' + selected + '.png';
     img.src = src;
-    img.width = 1570;
+    img.width = 523;
     img.height = 475;
     img.alt = selected;
     document.body.appendChild(img);
+}
+
+function no()
+{
+    if (selectedNum >= 4)
+    {
+        console.log('submit to server');
+    }
+    else check();
+}
+
+function check()
+{
+    selectedNum = selectedNum + 1;
+    selected = candidate[selectedNum];
+    console.log(selected);
 }
