@@ -219,12 +219,15 @@ function erase()
     coords = [];
 }
 
-function save()
-{
+function save(){    
     console.log('export image');
-    if (!fabric.Canvas.supports('toDataURL')) 
-     alert('This browser doesn\'t provide means to serialize canvas to an image');
-}
+     if (!fabric.Canvas.supports('toDataURL')) {
+      alert('This browser doesn\'t provide means to serialize canvas to an image');
+    }
+    else {
+      window.open(canvas.toDataURL('png'));
+    }
+    }
 
 function yes()
 {
