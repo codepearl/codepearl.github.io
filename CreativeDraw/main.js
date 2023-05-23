@@ -8,6 +8,7 @@ var mode;
 var selected;
 var candidate = [];
 var selectedNum;
+var str;
 
 
 $(function()
@@ -252,4 +253,5 @@ function check()
     selectedNum = selectedNum + 1;
     selected = candidate[selectedNum];
     console.log(selected);
+    str = '지금 그린것이 ' + selected + '가 맞나요?';
 }
