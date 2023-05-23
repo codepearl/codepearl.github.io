@@ -10,6 +10,10 @@ var candidate = [];
 var selectedNum;
 var str;
 
+function getRandomNumber(min, max) 
+{
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 $(function()
 {
@@ -234,7 +238,7 @@ function yes()
     console.log('change image');
     console.log(selected);
     var img = document.createElement("img");
-    var src = 'img/' + selected + '.png';
+    var src = 'img/' + selected + '_' + getRandomNumber(0,2) + '.jpg';
     img.src = src;
     img.width = 523;
     img.height = 475;
