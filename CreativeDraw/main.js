@@ -226,7 +226,7 @@ function change()
     console.log('change image');
     console.log(selected);
     var img = document.createElement("img");
-    var src = 'img/' + selcted '.png';
+    var src = 'img/' + selcted + '.png';
     img.src = src;
     img.width = 1570;
     img.height = 475;
