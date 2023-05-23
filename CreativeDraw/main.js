@@ -5,6 +5,7 @@ var canvas;
 var coords = [];
 var mousePressed = false;
 var mode;
+var selected;
 
 
 $(function()
@@ -33,6 +34,7 @@ $(function()
 
 function setTable(top5, probs)
 {
+    selected = top5[0]
     for (var i = 0; i < top5.length; i++)
     {
         let sym = document.getElementById('sym' + (i + 1))
@@ -217,4 +219,10 @@ function save()
     console.log('export image');
     if (!fabric.Canvas.supports('toDataURL')) 
      alert('This browser doesn\'t provide means to serialize canvas to an image');
+}
+
+function change()
+{
+    console.log('change image');
+    console.log(selected);
 }
