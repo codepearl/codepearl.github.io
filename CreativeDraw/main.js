@@ -254,7 +254,7 @@ function yes()
 
     else
     {
-        element.remove(img);
+        document.body.remove(img);
         console.log('change image');
         console.log(selected);
         img = document.createElement("img");
