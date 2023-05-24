@@ -11,6 +11,7 @@ var selectedNum;
 var str;
 var lang;
 var yesNum = 0;
+var img;
 
 function getRandomNumber(min, max) 
 {
@@ -241,7 +242,7 @@ function yes()
     {
         console.log('change image');
         console.log(selected);
-        var img = document.createElement("img");
+        img = document.createElement("img");
         var src = 'img/' + selected + '_' + getRandomNumber(0,2) + '.jpg';
         img.src = src;
         img.width = 523;
@@ -256,7 +257,7 @@ function yes()
         element.remove(img);
         console.log('change image');
         console.log(selected);
-        var img = document.createElement("img");
+        img = document.createElement("img");
         var src = 'img/' + selected + '_' + getRandomNumber(0,2) + '.jpg';
         img.src = src;
         img.width = 523;
