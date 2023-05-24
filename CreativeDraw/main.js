@@ -238,13 +238,12 @@ function yes()
 {
     console.log('change image');
     console.log(selected);
-    var img = document.getElementById("img");
+    var img = document.createElement("img");
     var src = 'img/' + selected + '_' + getRandomNumber(0,2) + '.jpg';
     img.src = src;
     img.width = 523;
     img.height = 475;
     img.alt = selected;
-    document.body.appendChild(img);
 }
 
 function no()
