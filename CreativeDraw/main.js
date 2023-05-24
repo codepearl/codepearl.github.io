@@ -237,6 +237,8 @@ function save(){
 
 function yes()
 {
+    if (yesNum == 0)
+    {
         console.log('change image');
         console.log(selected);
         var img = document.createElement("img");
@@ -246,6 +248,24 @@ function yes()
         img.height = 475;
         img.alt = selected;
         document.body.appendChild(img);
+        yesNum ++;
+    }
+
+    else
+    {
+        element.remove(img);
+        console.log('change image');
+        console.log(selected);
+        var img = document.createElement("img");
+        var src = 'img/' + selected + '_' + getRandomNumber(0,2) + '.jpg';
+        img.src = src;
+        img.width = 523;
+        img.height = 475;
+        img.alt = selected;
+        document.body.appendChild(img);
+        yesNum ++;
+    }
+
 }
 
 function no()
