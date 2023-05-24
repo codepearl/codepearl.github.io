@@ -9,6 +9,7 @@ var selected;
 var candidate = [];
 var selectedNum;
 var str;
+var lang;
 
 function getRandomNumber(min, max) 
 {
@@ -270,4 +271,19 @@ function check()
     const element = document.getElementById('target');
     var str = '지금 그린 것이 ' + selected + '가 맞나요?'
     element.innerText = str;
+}
+
+function changeLanguage()
+{
+    var radios = document.getElementsByName("priorityN");
+
+    for (var i = 0; i < radios.length; i++)
+    {       
+        if (radios[i].checked)
+        {
+            lang = (radios[i].value);
+            console.log(lang);
+            break;
+        }
+    }
 }
