@@ -10,7 +10,7 @@ var candidate = [];
 var selectedNum;
 var str;
 var lang;
-var yesNum;
+var yesNum = 0;
 
 function getRandomNumber(min, max) 
 {
