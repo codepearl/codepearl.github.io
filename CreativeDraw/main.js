@@ -289,7 +289,17 @@ function changeLanguage()
         {
             lang = (radios[i].value);
             console.log(lang);
-            break;
+            i = radios.length;
         }
     }
+
+    const element = document.getElementById('target');
+    var str;
+    if (lang == 'kr')
+        str = '지금 그린 것이 ' + selected + '가 맞나요?'
+    else if (lang == 'en')
+        str = 'Is the ' + selected + ' you drew right?' ;
+    else if (lang == 'jp')
+        str = '今描いたのは' + selected + 'が正しいですか?'
+    element.innerText = str;
 }
