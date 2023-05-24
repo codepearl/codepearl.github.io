@@ -275,7 +275,7 @@ function check()
 
 function changeLanguage()
 {
-    var radios = document.getElementsByName("priorityN");
+    var radios = document.getElementsByName("language");
 
     for (var i = 0; i < radios.length; i++)
     {       
