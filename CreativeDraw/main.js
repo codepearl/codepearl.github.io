@@ -244,6 +244,7 @@ function yes()
     img.width = 523;
     img.height = 475;
     img.alt = selected;
+    document.body.appendChild(img);
 }
 
 function no()
