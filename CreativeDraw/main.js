@@ -238,7 +238,7 @@ function yes()
 {
     console.log('change image');
     console.log(selected);
-    var img = document.createElement("img");
+    var img = document.getElementById("img");
     var src = 'img/' + selected + '_' + getRandomNumber(0,2) + '.jpg';
     img.src = src;
     img.width = 523;
