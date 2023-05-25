@@ -6,6 +6,7 @@ var coords = [];
 var mousePressed = false;
 var mode;
 var selected;
+var selected = -2;
 var candidate = [];
 var selectedNum;
 var str;
@@ -238,7 +239,7 @@ function save(){
 
 function yes()
 {
-    if (selectedNum != -1)
+    if (selectedNum != -2)
     {
         if (yesNum == 0)
         {
