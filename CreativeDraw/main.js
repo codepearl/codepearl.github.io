@@ -8,7 +8,7 @@ var mode;
 var selected;
 var candidate = [];
 var selectedNum;
-var selectedNum = -2
+var selectedNum = -2;
 var str;
 var lang;
 var yesNum = 0;
