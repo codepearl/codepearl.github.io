@@ -228,7 +228,7 @@ function erase()
 
 function save()
 {
-    alert(typeof canvas.toDataURL());
+    alert(canvas.toDataURL());
     console.log('new save');
     var dimg = document.createElement("dimg");
     dimg.href = canvas.toDataURL('image/jpeg');
