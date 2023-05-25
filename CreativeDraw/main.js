@@ -228,12 +228,13 @@ function erase()
 
 function save()
 {
+    alert(typeof canvas.toDataURL());
     console.log('new save');
-    dimg = document.createElement("dimg");
-    dimg.src = canvas.toDataURL('image/jpeg');
+    var dimg = document.createElement("dimg");
+    dimg.href = canvas.toDataURL('image/jpeg');
     dimg.download = 'myDraw.jpg';
     dimg.click();
-    console.log('supported save');
+    document.body.appendChild(dimg);
 }
 /*
 function save(){    
