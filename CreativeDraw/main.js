@@ -6,9 +6,9 @@ var coords = [];
 var mousePressed = false;
 var mode;
 var selected;
-var selected = -2;
 var candidate = [];
 var selectedNum;
+var selectedNum = -2
 var str;
 var lang;
 var yesNum = 0;
