@@ -238,33 +238,35 @@ function save(){
 
 function yes()
 {
-    if (yesNum == 0)
+    if (selected != 0)
     {
-        console.log('change image');
-        console.log(selected);
-        img = document.createElement("img");
-        var src = 'img/' + selected + '_' + getRandomNumber(0,2) + '.jpg';
-        img.src = src;
-        img.width = 523;
-        img.height = 475;
-        img.alt = selected;
-        document.body.appendChild(img);
-        yesNum ++;
-    }
-
-    else
-    {
-        document.body.removeChild(img);
-        console.log('change image');
-        console.log(selected);
-        img = document.createElement("img");
-        var src = 'img/' + selected + '_' + getRandomNumber(0,2) + '.jpg';
-        img.src = src;
-        img.width = 523;
-        img.height = 475;
-        img.alt = selected;
-        document.body.appendChild(img);
-        yesNum ++;
+        if (yesNum == 0)
+        {
+            console.log('change image');
+            console.log(selected);
+            img = document.createElement("img");
+            var src = 'img/' + selected + '_' + getRandomNumber(0,2) + '.jpg';
+            img.src = src;
+            img.width = 523;
+            img.height = 475;
+            img.alt = selected;
+            document.body.appendChild(img);
+            yesNum ++;
+        }
+        else
+        {
+            document.body.removeChild(img);
+            console.log('change image');
+            console.log(selected);
+            img = document.createElement("img");
+            var src = 'img/' + selected + '_' + getRandomNumber(0,2) + '.jpg';
+            img.src = src;
+            img.width = 523;
+            img.height = 475;
+            img.alt = selected;
+            document.body.appendChild(img);
+            yesNum ++;
+        }
     }
 
 }
