@@ -238,7 +238,7 @@ function save(){
 
 function yes()
 {
-    if (selected != 0)
+    if (selectedNum != -1)
     {
         if (yesNum == 0)
         {
