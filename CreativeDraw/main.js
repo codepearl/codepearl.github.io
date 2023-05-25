@@ -235,9 +235,11 @@ function save(){
     }
     else {
         dimg = document.createElement("dimg");
-        dimg.src = canvas.toDataURL('image/jpg');
+        dimg.href = canvas.toDataURL('image/jpeg');
+        dimg.download = 'myDraw.jpg';
+        dimg.click();
         document.body.appendChild(dimg);
-        window.open(canvas.toDataURL('image/png'));
+        window.open(canvas.toDataURL('image/jpeg'));
         console.log('else');
     }
 }
