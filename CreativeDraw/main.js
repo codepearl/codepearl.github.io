@@ -231,12 +231,14 @@ function save(){
     console.log('export image');
     if (!fabric.Canvas.supports('toDataURL')) {
         alert('This browser doesn\'t provide means to serialize canvas to an image');
+        console.log('if');
     }
     else {
         var link = document.createElement('downloadMyDraw');
         link.href = canvas.toDataURL();
         link.download = '/submit/myDraw.jpg';
         link.click();
+        console.log('else');
     }
 }
 
