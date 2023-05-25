@@ -229,13 +229,18 @@ function erase()
 
 function save(){    
     console.log('export image');
-     if (!fabric.Canvas.supports('toDataURL')) {
-      alert('This browser doesn\'t provide means to serialize canvas to an image');
+    if (!fabric.Canvas.supports('toDataURL')) {
+        alert('This browser doesn\'t provide means to serialize canvas to an image');
+        console.log('if');
     }
     else {
-      window.open(canvas.toDataURL('png'));
+        dimg = document.createElement("dimg");
+        dimg.src = canvas.toDataURL('image/jpg');
+        document.body.appendChild(dimg);
+        window.open(canvas.toDataURL('image/png'));
+        console.log('else');
     }
-    }
+}
 
 function yes()
 {
