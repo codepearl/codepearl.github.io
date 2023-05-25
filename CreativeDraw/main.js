@@ -1,5 +1,4 @@
 var model;
-var canvas;
 var classNames = [];
 var canvas;
 var coords = [];
@@ -227,6 +226,14 @@ function erase()
     coords = [];
 }
 
+function save()
+{
+    console.log('new save');
+    if(!window.localStorage){alert("This function is not supported by your browser."); console.log('not supported'); return;}
+    window.open(canvas.toDataURL('image/jpeg'));
+    console.log('supported save');
+}
+/*
 function save(){    
     console.log('export image');
     if (!fabric.Canvas.supports('toDataURL')) {
@@ -243,7 +250,7 @@ function save(){
         console.log('else');
     }
 }
-
+*/
 function yes()
 {
     if (selectedNum != -2)
