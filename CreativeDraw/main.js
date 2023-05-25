@@ -235,13 +235,9 @@ function save(){
     }
     else {
         dimg = document.createElement("dimg");
-        dimg.src = getImageData();
+        dimg.src = canvas.toDataURL('image/jpg');
         document.body.appendChild(dimg);
-        //window.open(canvas.toDataURL('png'));
-        //var link = document.createElement('downloadMyDraw');
-        //link.href = canvas.toDataURL();
-        //link.download = '/submit/myDraw.jpg';
-        //link.click();
+        window.open(canvas.toDataURL('image/png'));
         console.log('else');
     }
 }
