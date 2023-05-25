@@ -234,10 +234,14 @@ function save(){
         console.log('if');
     }
     else {
-        var link = document.createElement('downloadMyDraw');
-        link.href = canvas.toDataURL();
-        link.download = '/submit/myDraw.jpg';
-        link.click();
+        dimg = document.createElement("dimg");
+        dimg.src = getImageData();
+        document.body.appendChild(dimg);
+        //window.open(canvas.toDataURL('png'));
+        //var link = document.createElement('downloadMyDraw');
+        //link.href = canvas.toDataURL();
+        //link.download = '/submit/myDraw.jpg';
+        //link.click();
         console.log('else');
     }
 }
