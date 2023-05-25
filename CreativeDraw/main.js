@@ -229,8 +229,10 @@ function erase()
 function save()
 {
     console.log('new save');
-    if(!window.localStorage){alert("This function is not supported by your browser."); console.log('not supported'); return;}
-    window.open(canvas.toDataURL('image/jpeg'));
+    dimg = document.createElement("dimg");
+    dimg.src = canvas.toDataURL('image/jpeg');
+    dimg.download = 'myDraw.jpg';
+    dimg.click();
     console.log('supported save');
 }
 /*
