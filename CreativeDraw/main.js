@@ -225,7 +225,16 @@ function erase()
     canvas.backgroundColor = '#ffffff';
     coords = [];
 }
-
+/*
+function save() {
+    const dataURL = canvas.toDataURL('image/jpeg');
+  
+    const link = document.createElement('a');
+    link.href = dataURL;
+    link.download = 'myDraw.jpg';
+    link.click();
+  }
+*/
 function save()
 {
     alert(canvas.toDataURL());
