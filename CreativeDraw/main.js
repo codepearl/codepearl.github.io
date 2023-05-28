@@ -262,18 +262,17 @@ function save(){
         console.log('else');
     }
 }
-var saveButton = document.getElementById("save");
-saveButton.addEventListener(
-  "click",
-  function(e) {
-    this.href = canvas.toDataURL({
-      format: "png"
-    });
+var saveButton = document.getElementById("saveLink");
+saveButton.addEventListener("click", saveImage, false);
 
-    this.download = "canvas.png";
-  },
-  false
-);
+function saveImage(e)
+{
+    this.href = canvas.toDataURL({
+        format: 'png',
+        quality: 0.8
+    });
+    this.download = 'canvas.png'
+}
 */
 function saveToServer() {
     const dataURL = canvas.toDataURL('image/jpeg');
