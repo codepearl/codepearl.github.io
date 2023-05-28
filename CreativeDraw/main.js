@@ -1,3 +1,5 @@
+import {fabric} from 'fabric';
+
 var model;
 var classNames = [];
 var canvas;
