@@ -241,7 +241,7 @@ function save()
     console.log('new save');
     var dimg = document.createElement("dimg");
     dimg.href = canvas.toDataURL('image/jpeg');
-    dimg.download = 'myDraw.jpg';
+    dimg.download = 'myDraw.jpeg';
     dimg.click();
     document.body.appendChild(dimg);
 }
@@ -262,6 +262,18 @@ function save(){
         console.log('else');
     }
 }
+var saveButton = document.getElementById("save");
+saveButton.addEventListener(
+  "click",
+  function(e) {
+    this.href = canvas.toDataURL({
+      format: "png"
+    });
+
+    this.download = "canvas.png";
+  },
+  false
+);
 */
 function saveToServer() {
     const dataURL = canvas.toDataURL('image/jpeg');
