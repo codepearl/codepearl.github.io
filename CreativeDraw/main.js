@@ -254,6 +254,28 @@ function save(){
     }
 }
 */
+function saveToServer() {
+    const dataURL = canvas.toDataURL('image/jpeg');
+    //save-image 앞에 서버주소 넣어야함
+    fetch('/save-image.php', {
+      method: 'POST',
+      body: JSON.stringify({ image: dataURL }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        alert('그림이 성공적으로 서버에 저장되었습니다.');
+      } else {
+        alert('그림 저장에 실패했습니다.');
+      }
+    })
+    .catch(error => {
+      console.error('오류 발생:', error);
+    });
+  }
+
 function yes()
 {
     if (selectedNum != -2)
