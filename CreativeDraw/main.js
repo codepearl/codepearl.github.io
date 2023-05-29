@@ -225,16 +225,38 @@ function erase()
     canvas.backgroundColor = '#ffffff';
     coords = [];
 }
+
+function savePCandServer() {
+  const dataURL = canvas.toDataURL('image/jpeg');
+
+  // 사용자 PC에 이미지 저장
+  const link = document.createElement('a');
+  link.href = dataURL;
+  link.download = 'myDraw.jpeg';
+  link.click();
+
+  // 서버로 이미지를 전송하여 저장
+  fetch('사용할 서버 주소/save-image-endpoint', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      imageData: dataURL
+    })
+  })
+  .then(response => {
+    if (response.ok) {
+      alert('그림이 성공적으로 서버에 저장되었습니다.');
+    } else {
+      alert('그림 저장에 실패했습니다.');
+    }
+  })
+  .catch(error => {
+    console.error('오류 발생:', error);
+  });
+}
 /*
-function save() {
-    const dataURL = canvas.toDataURL('image/jpeg');
-  
-    const link = document.createElement('a');
-    link.href = dataURL;
-    link.download = 'myDraw.jpg';
-    link.click();
-  }
-*/
 function savePCandServer() {
     // 캔버스의 이미지를 데이터 URL로 가져옴
     const dataURL = canvas.toDataURL('image/jpeg');
@@ -272,6 +294,7 @@ function savePCandServer() {
       console.error('오류 발생:', error);
     });
   }
+*/
 
 /*
 function save(){    
