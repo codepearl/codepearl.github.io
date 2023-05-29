@@ -235,8 +235,11 @@ function save() {
     link.click();
   }
 */
-function save()
-{
+function savePCandServer() {
+    // 캔버스의 이미지를 데이터 URL로 가져옴
+    const dataURL = canvas.toDataURL('image/jpeg');
+
+    //사용자pc에 이미지 저장
     alert(canvas.toDataURL());
     console.log('new save');
     var dimg = document.createElement("dimg");
@@ -244,7 +247,32 @@ function save()
     dimg.download = 'myDraw.jpeg';
     dimg.click();
     document.body.appendChild(dimg);
-}
+
+    // 서버로 이미지를 전송하여 저장
+    // '보낼 서버주소와 해당하는 엔드포인트로 변경해야함 /save-image.php'에 POST 요청을 보냄
+    fetch('사용할 서버 주소/save-image-endpoint', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          imageData: dataURL
+        })
+      })
+    .then(response => {
+      // 응답을 확인하고 성공 또는 실패에 따라 알림을 표시함
+      if (response.ok) {
+        alert('그림이 성공적으로 서버에 저장되었습니다.');
+      } else {
+        alert('그림 저장에 실패했습니다.');
+      }
+    })
+    .catch(error => {
+      // 오류가 발생한 경우 오류를 콘솔에 출력함
+      console.error('오류 발생:', error);
+    });
+  }
+
 /*
 function save(){    
     console.log('export image');
@@ -274,27 +302,6 @@ function saveImage(e)
     this.download = 'canvas.png'
 }
 */
-function saveToServer() {
-    const dataURL = canvas.toDataURL('image/jpeg');
-    //save-image 앞에 서버주소 넣어야함
-    fetch('/save-image.php', {
-      method: 'POST',
-      body: JSON.stringify({ image: dataURL }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(response => {
-      if (response.ok) {
-        alert('그림이 성공적으로 서버에 저장되었습니다.');
-      } else {
-        alert('그림 저장에 실패했습니다.');
-      }
-    })
-    .catch(error => {
-      console.error('오류 발생:', error);
-    });
-  }
 
 function yes()
 {
