@@ -35,3 +35,193 @@
     background: #007AFF;
     cursor: pointer;
 }
+
+tab {
+    float: right;
+vertical-align: baseline;
+}	
+
+div.tab {
+    color: black;
+    display: flex;
+ }
+
+[class *=menu] {
+    margin: auto;
+    width: 120;
+    text-align: center;
+
+
+}
+
+[class *=menu]:hover {
+    background-color: ;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.menu1{
+    top: -120px;
+    color: black;
+}
+
+
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'S-CoreDream-3Light';
+}
+
+
+
+
+
+
+footer {
+    background-size: cover;
+    position: relative;
+}
+
+
+#footerContanier {
+    width: 1526px;
+    margin: 50;
+    position: relative;
+}
+
+#footerContanier #footerLogoLeft {
+
+    color: #000000;
+    left: 60px;
+    display: inline-block;
+    font-size: 40px;
+    font-family: 'Righteous';
+    border-bottom: 2px solid red;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+
+    top: -20px;
+    position: relative;
+}
+
+
+
+#footerContanier #footerSocialIcon {
+    position: relative;
+    top: 100px;
+    left: -250px;
+    display: inline-block;
+}
+
+#footerContanier #footerSocialIcon img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#footerContanier #footerSocialIcon img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+#footerContanier #footerCenter {
+    width: 430px;
+    position: absolute;
+    top: -10px;
+    left: 545px;
+    color: #000000;
+    text-align: center;
+}
+
+#footerContanier #footerCenter h3,
+#footerRight h3 {
+    font-size: 40px;
+    font-family: 'Righteous';
+    border-bottom: 2px solid red;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+#footerRight input:focus {
+    border: 2px solid blue;
+}
+
+#footerContanier #footerCenter p {
+    line-height: 30px;
+}
+
+#footerContanier #footerCenter p span {
+    color: red;
+    font-weight: 400;
+    text-indent: 10px;
+    margin-right: 10px;
+}
+
+#footerContanier #footerRight {
+    width: 400px;
+    left: 1030px;
+    display: inline-block;
+    position: absolute;
+    top: -10px;
+    color: #000000;
+    text-align: center;
+}
+
+#footerContanier #footerRight p {
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+
+#footerContanier #footerRight input {
+    margin-top: 10px;
+    width: 280px;
+    height: 28px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.mediaIcons {
+  position: fixed;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+  padding: 1px 2px;
+  z-index: 1;
+}
+.mediaIcons a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px;
+  text-decoration: none;
+}
+.mediaIcons a i {
+  color: rgba(39, 39, 39, 0.8);
+}
+.mediaIcons a:hover .fa-facebook-f {
+  color: #5078cf;
+}
+.mediaIcons a:hover .fa-twitter {
+  color: #00acee;
+}
+.mediaIcons a:hover .fa-instagram {
+  color: #fd9217;
+}
+.mediaIcons a:hover .fa-youtube {
+  color: #ff0000;
+}
