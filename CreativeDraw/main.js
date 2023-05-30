@@ -229,7 +229,7 @@ function erase()
 function save()
 {
     var canvas = document.getElementById("myCanvas");
-    var saveButton = document.getElementById("saveButton");
+    var saveButton = document.getElementById("saveLink");
 
       saveButton.addEventListener("click", function () {
         // 캔버스의 이미지를 데이터 URL로 가져옴
