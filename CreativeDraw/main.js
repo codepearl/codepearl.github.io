@@ -228,7 +228,7 @@ function erase()
 
 function save()
 {
-    var canvas = document.getElementById("myCanvas");
+    var canvas = document.getElementById("canvas");
     var saveButton = document.getElementById("saveLink");
 
       saveButton.addEventListener("click", function () {
