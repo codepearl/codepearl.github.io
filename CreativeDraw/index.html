@@ -1,7 +1,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>CreativeDraw!</title>
+<link	rel="shortcut icon" 	href="https://blog.naver.com/favicon.ico" />
+<title>♡융합시스템공학과 3조♡</title>
 
 <!-- bs4 css -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
@@ -35,8 +36,23 @@
 <body>
 <nav class="navbar navbar-expand-sm bg-light navbar-light">
   <!-- Brand/logo -->
-  <a class="navbar-brand" href="#"><h1>CreativeDraw!<small></small></h1></a>
-  </nav>
+  <a class="navbar-brand" href="#"><h1>Catch me If you can<small></small></h1></a>
+  <footer class="nav-footer"><h2>융합시스템공학과 3조<h2></footer>	
+
+  <div class="tab">
+    <div class="menu1">
+        <p>Team</p>
+    </div>
+    <div class="menu2">
+        <p>Learning data</p>
+    </div>
+    <div class="menu3">
+        <p>Github</p>
+    </div>
+  </div>
+</nav>
+	  
+	  
 <div class="container-fluid"> 
 
 <blockquote class="blockquote text-justify" style="margin:30px;">
@@ -46,16 +62,20 @@
 </div>
 
 <div class="row">
-  <div class="col" style ='margin-left:100px;'>
-<h4 id ='status' >Loading Model... </h4>	  
-<canvas id="canvas" width="300" height="300" class="canvas" style="border:1px solid #b9bfc9;margin-top:25px;"></canvas>
-<div class="btn-group" style = 'margin-top:40px; '>
-<input type="range" min="5" max="20" value="10" class="slider" id="myRange" style ='margin-top:20px;'>
-<button type="button" class="btn btn-outline-primary" onclick ='erase()' style ='margin-left:10px;' disabled>Clear</button>
-<button type="button" class="btn btn-outline-primary" id="saveLink" style ='margin-left:10px;' disabled>Save</button>
-    </div>
-<div class="text-group" style = 'margin-top:40px; '>
-</div>
+	<div class="col" style ='margin-left:100px;'>
+		<h4 id ='status' >Loading Model... </h4>		
+		<canvas id="canvas" width="500" height="500" class="canvas" style="border:1px solid #b9bfc9;margin-top:25px;"></canvas>
+		<canvas id="canvas" width="500" height="500" class="canvas" style="border:1px solid #b9bfc9; margin-left:550px;margin-top:-475px;"></canvas>
+		<div class="btn-group" style = 'margin-top:40px; '>
+			<input type="range" min="5" max="20" value="10" class="slider" id="myRange" style ='margin-top:20px;'>
+			<button type="button" class="btn btn-outline-primary" id="saveLink" <img src="codepearl.github.io/CreativeDraw/img/save.jpg" width="30" height="35">></button>
+			<button type="button" class="btn btn-outline-primary" onclick ='erase()' style ='margin-left:10px;margin-right:495px;' disabled>Clear</button>
+
+			<button type="button" class="btn btn-outline-primary" id="saveLink" <img src="codepearl.github.io/CreativeDraw/img/save.jpg" width="30" height="35">></button>
+			<button type="button" class="btn btn-outline-primary" onclick ='erase()' style ='margin-left:10px;' disabled>Clear</button>
+		</div> 
+		<div class="text-group" style = 'margin-top:40px; '>
+	</div>
 <div class="btn-group2" style = 'margin-top:40px; '>
 <!-- <a href="#" id="saveLink">Save</a> -->
 <br/> <div id="target"> </div>
@@ -71,6 +91,7 @@
     </form>
     </div>  
 </div>
+	
   <div class="col">
     <section style="margin-top:120px">
     <div class="pieID pie">
@@ -101,6 +122,41 @@
   </section>
 </div>
 </div>  
+	  
+	  
+<!-- Footer Section-->
+<footer class="footerSection">
+<div id="footerContanier">
+<section style="margin-top:120px">
+    <div id="footerLogoLeft">
+	Team Social Networks
+    </div>
+	
+    <div id="footerSocialIcon">
+	<img src="instagram-icon.jpg">
+	<img src="facebook-icon.png">
+	<img src="twitter-icon.png">
+	<img src="github-icon.jpg">
+    </div>
+	
+    <div id="footerCenter">
+	<h3>Contact Us</h3>
+	<p><span>Tel:</span>010 6346 1195</p>
+	<p><span>E-Mail:</span>wonmon88@naver.com</p>
+	<p><span>Web:</span>codepearl.github.io/CreativeDraw/</p>
+	<p><span>Adress:</span>경기도 수원시 영통구 월드컵로 206</p>
+    </div>
+
+    <div id="footerRight">
+	<h3>About Us</h3>
+	<p>♥ 박진주 (202020648) 박찬우 (202020620) ♥ <br/>♥ 박윤우 (202020650) 서경수 (202020641) ♥<br/>♥ 성원기 (202020627) 이준영 (201920632) ♥</p>
+    </div>
+</div>
+</footer>
+	  
+	  
+	  
+	  
 </body>
 <script src="pie.js"></script>
 <script>
