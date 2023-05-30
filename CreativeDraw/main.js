@@ -225,7 +225,7 @@ function erase()
     canvas.backgroundColor = '#ffffff';
     coords = [];
 }
-
+//사용자PC에 저장하는 기능은 완성함, 서버 주소입력하여 서버에 저장되는지 확인해야함
 function save()
 {
     var canvas = document.getElementById("canvas");
