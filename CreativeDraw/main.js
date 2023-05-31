@@ -12,6 +12,7 @@ var str;
 var lang;
 var yesNum = 0;
 var img;
+var trans_kr = {};
 
 function getRandomNumber(min, max) 
 {
@@ -135,8 +136,8 @@ function getClassNames(indices)
 //class name 불러오기
 async function loadDict()
 {
-    //loc = 'model/class_names.txt'
-    loc = 'translation_ko.txt'
+    loc = 'model/class_names.txt'
+
     await $.ajax(
     {
         url: loc,
@@ -387,10 +388,26 @@ function changeLanguage()
     const element = document.getElementById('target');
     var str;
     if (lang == 'kr')
-        str = '지금 그린 것이 ' + selected + '가 맞나요?'
+        str = '지금 그린 것이 ' + trans_kr[selected] + '가 맞나요?'
     else if (lang == 'en')
         str = 'Is the ' + selected + ' you drew right?' ;
     else if (lang == 'jp')
         str = '今描いたのは' + selected + 'が正しいですか?'
     element.innerText = str;
 }
+//단어 번역
+function LoadTrans()
+{
+	var ko = new FileReader();
+	ko.readAsText('translation_ko.txt');
+
+	var en = new FileReader();
+	en.readAsText('translation_en.txt');
+
+	for (var i=0; i<100; i++)
+	{
+        trans_kr[en[i]]=ko[i];
+    }
+}
+
+
