@@ -135,8 +135,8 @@ function getClassNames(indices)
 //class name 불러오기
 async function loadDict()
 {
-    loc = 'model/class_names.txt'
-    
+    //loc = 'model/class_names.txt'
+    loc = 'translation_kr.txt'
     await $.ajax(
     {
         url: loc,
