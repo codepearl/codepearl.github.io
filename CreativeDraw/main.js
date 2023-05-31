@@ -319,8 +319,8 @@ function yes()
             img.width = 523;
             img.height = 475;
             img.style.position = "absolute";
-            img.style.left = "550px";
-            img.style.top = "-400px";
+            img.style.marginLeft = "550px";
+            img.style.marginTop = "-475px";
             img.alt = selected;
             document.body.appendChild(img);
             yesNum ++;
@@ -336,8 +336,8 @@ function yes()
             img.width = 523;
             img.height = 475;
             img.style.position = "absolute";
-            img.style.left = "550px";
-            img.style.top = "-400px";
+            img.style.marginLeft = "550px";
+            img.style.marginTop = "-475px";
             img.alt = selected;
             document.body.appendChild(img);
             yesNum ++;
