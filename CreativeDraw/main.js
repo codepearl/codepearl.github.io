@@ -374,7 +374,7 @@ function check()
 function changeLanguage()
 {
     var radios = document.getElementsByName("language");
-
+    
     for (var i = 0; i < radios.length; i++)
     {       
         if (radios[i].checked)
@@ -384,7 +384,7 @@ function changeLanguage()
             i = radios.length;
         }
     }
-
+    LoadTrans();
     const element = document.getElementById('target');
     var str;
     if (lang == 'kr')
@@ -399,10 +399,10 @@ function changeLanguage()
 function LoadTrans()
 {
 	var ko = new FileReader();
-	ko.readAsText('translation_ko.txt');
+	ko.readAsDataURL('translation_ko.txt');
 	console.log(ko[1]);
 	var en = new FileReader();
-	en.readAsText('translation_en.txt');
+	en.readAsDataURL('translation_en.txt');
 
 	for (var i=0; i<100; i++)
 	{
