@@ -318,6 +318,9 @@ function yes()
             img.src = src;
             img.width = 523;
             img.height = 475;
+            img.style.position = "absolute";
+            img.style.left = "550px";
+            img.style.top = "-475px";
             img.alt = selected;
             document.body.appendChild(img);
             yesNum ++;
@@ -332,6 +335,9 @@ function yes()
             img.src = src;
             img.width = 523;
             img.height = 475;
+            img.style.position = "absolute";
+            img.style.left = "550px";
+            img.style.top = "-475px";
             img.alt = selected;
             document.body.appendChild(img);
             yesNum ++;
