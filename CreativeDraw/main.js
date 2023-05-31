@@ -136,7 +136,7 @@ function getClassNames(indices)
 async function loadDict()
 {
     //loc = 'model/class_names.txt'
-    loc = 'mini_classes.txt'
+    loc = 'translation_ko.txt'
     await $.ajax(
     {
         url: loc,
