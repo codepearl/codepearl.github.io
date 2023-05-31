@@ -400,7 +400,7 @@ function LoadTrans()
 {
 	var ko = new FileReader();
 	ko.readAsText('translation_ko.txt');
-
+	console.log(ko[1]);
 	var en = new FileReader();
 	en.readAsText('translation_en.txt');
 
