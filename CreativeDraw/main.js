@@ -347,8 +347,8 @@ function changeLanguage()
             i = radios.length;
         }
     }
-    readTextFile("translation_en.txt");
-    //LoadTrans();
+    
+    LoadTrans();
     const element = document.getElementById('target');
     var str;
     if (lang == 'kr')
@@ -376,22 +376,8 @@ function changeLanguage()
 }*/
 function LoadTrans() 
 {
-	var koFile = new FileReader();
-	var enFile = new FileReader();
-	
-	koFile.onload = function (event) {
-		var koData = event.target.result; // 읽은 한국어 데이터
-		console.log(koData[0]);
-		for (var i = 0; i < 100; i++) {
-			trans_kr[enData[i]] = koData[i];
-			}
-		};
-	
-	enFile.onload = function (event) {
-		var enData = event.target.result; // 읽은 영어 데이터
-		koFile.readAsText('translation_ko.txt'); // 한국어 파일 읽기 시작
-		};
-	enFile.readAsText('translation_en.txt'); // 영어 파일 읽기 시작
+    readTextFile("translation_en.txt");
+    readTextFile("translation_kr.txt");
 }
 
 
