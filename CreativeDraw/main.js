@@ -283,7 +283,7 @@ function yes()
             img.height = 475;
             img.style.position = "absolute";
             img.style.marginLeft = "630px";
-            img.style.marginTop = "-1050px";
+            img.style.marginTop = "-900px";
             img.alt = selected;
             document.body.appendChild(img);
             yesNum ++;
@@ -300,7 +300,7 @@ function yes()
             img.height = 475;
             img.style.position = "absolute";
             img.style.marginLeft = "630px";
-            img.style.marginTop = "-1050px";
+            img.style.marginTop = "-900px";
             img.alt = selected;
             document.body.appendChild(img);
             yesNum ++;
