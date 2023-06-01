@@ -388,7 +388,7 @@ function LoadTrans()
     }
  	console.log(en[0]);
  	console.log(en[1]);
-     data=readTextFile("translation_ko.txt");
+   /*  data=readTextFile("translation_ko.txt");
      1st = data.split(/\n/);
     for (var i = 0; i < 1st.length - 1; i++)
     {
@@ -398,7 +398,7 @@ function LoadTrans()
     for (var i=0; i<100; i++)
 	{
         trans_kr[en[i]]=ko[i];
-    	}
+    	}*/
 }
 
 /*function LoadTrans() 
