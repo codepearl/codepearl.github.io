@@ -377,7 +377,7 @@ function changeLanguage()
 function LoadTrans() 
 {
     readTextFile("translation_en.txt");
-    readTextFile("translation_kr.txt");
+    readTextFile("translation_ko.txt");
 }
 
 
@@ -393,6 +393,7 @@ function readTextFile(file)
             {
                 var allText = rawFile.responseText;
                 console.log(allText);
+		console.log(allText[1]);
             }
         }
     }
