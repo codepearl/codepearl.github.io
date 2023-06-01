@@ -363,10 +363,10 @@ function LoadTrans()
 {	
 	
 	var ko = new FileReader();
-	ko.readAsText('translation_ko.txt');
+	ko.readAsText('translation_ko.txt','ANSI');
 	console.log(ko[0]);
 	var en = new FileReader();
-	en.readAsText('translation_en.txt');
+	en.readAsText('translation_en.txt','ANSI');
 
 	for (var i=0; i<100; i++)
 	{
