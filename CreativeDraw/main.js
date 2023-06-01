@@ -380,18 +380,20 @@ function LoadTrans()
 {    var ko = [];
      var en = [];
     data=readTextFile("translation_en.txt");
-    const lst = data.split(/\n/)
+    const lst = data.split(/\n/);
     for (var i = 0; i < lst.length - 1; i++)
     {
-        let symbol = lst[i]
-        en[i] = symbol
+        let symbol = lst[i];
+        en[i] = symbol;
     }
+ 	console.log(en[0]);
+ 	console.log(en[1]);
     data=readTextFile("translation_ko.txt");
-    const 1st = data.split(/\n/)
+    const 1st = data.split(/\n/);
     for (var i = 0; i < 1st.length - 1; i++)
     {
-        let symbol = 1st[i]
-        ko[i] = symbol
+        let symbol = 1st[i];
+        ko[i] = symbol;
     }
     for (var i=0; i<100; i++)
 	{
