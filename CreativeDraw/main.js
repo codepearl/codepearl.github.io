@@ -380,25 +380,23 @@ function LoadTrans()
 {    var ko = [];
      var en = [];
     var data=readTextFile("translation_en.txt");
-    var lst = data.split(/\n/);
-    for (var i = 0; i < lst.length - 1; i++)
+    var array = data.toString().split("\n");
+    for (var i in array)
     {
-        var symbol = lst[i];
-        en[i] = symbol;
+        en[i] = array[i];
     }
  	console.log(en[0]);
  	console.log(en[1]);
-   /*  data=readTextFile("translation_ko.txt");
-     1st = data.split(/\n/);
-    for (var i = 0; i < 1st.length - 1; i++)
+    var data=readTextFile("translation_ko.txt");
+    var array = data.toString().split("\n");
+    for (var i in array)
     {
-        symbol = 1st[i];
-        ko[i] = symbol;
+        ko[i] = array[i];
     }
     for (var i=0; i<100; i++)
 	{
         trans_kr[en[i]]=ko[i];
-    	}*/
+    	}
 }
 
 /*function LoadTrans() 
