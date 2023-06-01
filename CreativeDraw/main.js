@@ -1,5 +1,3 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
 var model;
 var classNames = [];
 var canvas;
