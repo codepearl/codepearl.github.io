@@ -380,13 +380,16 @@ function LoadTrans()
 	
 	koFile.onload = function (event) {
 		var koData = event.target.result; // 읽은 한국어 데이터
-		koFile.readAsText('translation_ko.txt');
+		
 		};
 	
 	enFile.onload = function (event) {
 		var enData = event.target.result; // 읽은 영어 데이터
-		enFile.readAsText('translation_en.txt'); // 영어 파일 읽기 시작
+		
 		};
+	koFile.readAsText('translation_ko.txt');
+	enFile.readAsText('translation_en.txt');
+	console.log(koData);
 	for (var i = 0; i < 100; i++) {
 		trans_kr[enData[i]] = koData[i];
 		}
