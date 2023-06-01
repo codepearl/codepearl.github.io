@@ -412,7 +412,7 @@ function LoadTrans()
     	}
 }*/
 
-function readTextFile(file, ln)
+function readTextFile(file)
 {
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", file, false);
@@ -440,4 +440,31 @@ function readTextFile(file, ln)
     }
     rawFile.send(null);
 }
+/*function readTextFile(file, ln)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                console.log(allText);
+		console.log(allText[1]);
+                if(ln == 'kr')
+                {
+                     //한국어를 파싱
+                                 //trans_kr[trans_en[i]] = 값
+                }
+                else if(ln == 'en')
+                {
+                     //영어로 allText를 파싱 trans_en
+                }
 
+            }
+        }
+    }
+    rawFile.send(null);
+}*/
