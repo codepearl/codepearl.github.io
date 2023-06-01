@@ -388,7 +388,7 @@ function changeLanguage()
     const element = document.getElementById('target');
     var str;
     if (lang == 'kr')
-        str = '지금 그린 것이 ' + selected + '가 맞나요?'
+        str = '지금 그린 것이 ' + trans_kr[selected] + '가 맞나요?'
     else if (lang == 'en')
         str = 'Is the ' + selected + ' you drew right?' ;
     else if (lang == 'jp')
@@ -397,8 +397,19 @@ function changeLanguage()
 }
 //단어 번역
 function LoadTrans()
-{
-	var ko = new FileReader();
+{	
+	BufferedReader ko = new BufferedReader(
+        new FileReader('translation_ko.txt'),
+        16 * 1024);
+	
+	String str;
+	for (var i=0; i<100; i++)
+	{
+	    str = ko.readLine();
+	    trans_kr[en[i]]=str;
+	}
+        
+	/*var ko = new FileReader();
 	ko.readAsDataURL('translation_ko.txt');
 	console.log(ko[1]);
 	var en = new FileReader();
@@ -406,7 +417,7 @@ function LoadTrans()
 
 	for (var i=0; i<100; i++)
 	{
-        trans_kr[en[i]]=ko[i];
+        trans_kr[en[i]]=ko[i];*/
     }
 }
 
