@@ -375,9 +375,26 @@ function changeLanguage()
     	}
 }*/
 function LoadTrans() 
-{
-    readTextFile("translation_en.txt");
-    readTextFile("translation_ko.txt");
+{    var ko = [];
+     var en = [];
+    data=readTextFile("translation_en.txt");
+    const lst = data.split(/\n/)
+    for (var i = 0; i < lst.length - 1; i++)
+    {
+        let symbol = lst[i]
+        en[i] = symbol
+    }
+    data1=readTextFile("translation_ko.txt");
+    const lst = data1.split(/\n/)
+    for (var i = 0; i < lst.length - 1; i++)
+    {
+        let symbol = lst[i]
+        ko[i] = symbol
+    }
+    for (var i=0; i<100; i++)
+	{
+        trans_kr[en[i]]=ko[i];
+    	}
 }
 
 
