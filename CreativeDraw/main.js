@@ -13,6 +13,7 @@ var lang;
 var yesNum = 0;
 var img;
 var trans_kr = {};
+var trans_en = {};
 
 
 function getRandomNumber(min, max) 
@@ -374,6 +375,7 @@ function changeLanguage()
         trans_kr[en[i]]=ko[i];
     	}
 }*/
+/*
 function LoadTrans() 
 {    var ko = [];
      var en = [];
@@ -396,9 +398,14 @@ function LoadTrans()
         trans_kr[en[i]]=ko[i];
     	}
 }
+*/
+function LoadTrans() 
+{
+    readTextFile("translation_en.txt",en);
+    readTextFile("translation_kr.txt",kr);
+}
 
-
-function readTextFile(file)
+function readTextFile(file, ln)
 {
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", file, false);
@@ -411,6 +418,16 @@ function readTextFile(file)
                 var allText = rawFile.responseText;
                 console.log(allText);
 		console.log(allText[1]);
+                if(ln == 'kr')
+                {
+                     //한국어를 파싱
+                                 //trans_kr[trans_en[i]] = 값
+                }
+                else if(ln == 'en')
+                {
+                     //영어로 allText를 파싱 trans_en
+                }
+
             }
         }
     }
