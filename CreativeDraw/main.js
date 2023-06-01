@@ -348,7 +348,7 @@ function changeLanguage()
         }
     }
     
-    LoadTrans();
+    //LoadTrans();
     const element = document.getElementById('target');
     var str;
     if (lang == 'kr')
@@ -385,11 +385,11 @@ function LoadTrans()
         en[i] = symbol
     }
     data1=readTextFile("translation_ko.txt");
-    const lst = data1.split(/\n/)
-    for (var i = 0; i < lst.length - 1; i++)
+    const 2st = data1.split(/\n/)
+    for (var i = 0; i < 2st.length - 1; i++)
     {
-        let symbol = lst[i]
-        ko[i] = symbol
+        let symbol1 = 2st[i]
+        ko[i] = symbol1
     }
     for (var i=0; i<100; i++)
 	{
