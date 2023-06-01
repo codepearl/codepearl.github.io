@@ -386,12 +386,12 @@ function LoadTrans()
         let symbol = lst[i]
         en[i] = symbol
     }
-    data1=readTextFile("translation_ko.txt");
-    const 2st = data1.split(/\n/)
-    for (var i = 0; i < 2st.length - 1; i++)
+    data=readTextFile("translation_ko.txt");
+    const 1st = data.split(/\n/)
+    for (var i = 0; i < 1st.length - 1; i++)
     {
-        let symbol1 = 2st[i]
-        ko[i] = symbol1
+        let symbol = 1st[i]
+        ko[i] = symbol
     }
     for (var i=0; i<100; i++)
 	{
