@@ -1,3 +1,5 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
 var model;
 var classNames = [];
 var canvas;
@@ -13,7 +15,7 @@ var lang;
 var yesNum = 0;
 var img;
 var trans_kr = {};
-var ko = [];
+var ko;
 
 
 function getRandomNumber(min, max) 
@@ -399,23 +401,23 @@ function changeLanguage()
 }
 //단어 번역
 function LoadTrans()
-{	/*public BufferedReader(Reader in, int sz);
-	BufferedReader reader = new BufferedReader(
+{	
+	BufferedReader ko = new BufferedReader(
         new FileReader("translation_ko.txt", Charset.forName("UTF-8")),
         16 * 1024);
 	
 	String str;
 	for (var i=0; i<100; i++)
 	{
-	    str = reader.readLine();
+	    str = ko.readLine();
 	    trans_kr[en[i]]=str;
-	}*/
-	var path;
+	}
+	/*var path;
         Path path = Paths.get("translation_ko.txt");
     	List<String> lines = Files.readAllLines(path);
   	for(var i=0; i<100; i++) {
         trans_kr[en[i]]=lines[i];
-	}
+	}*/
 	/*var ko = new FileReader();
 	ko.readAsDataURL('translation_ko.txt');
 	console.log(ko[1]);
