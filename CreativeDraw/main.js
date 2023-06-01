@@ -266,46 +266,6 @@ function save()
           });
       });
 }
-/*
-function save() {
-    alert(canvas.toDataURL());
-    console.log('new save');
-    var dimg = document.createElement("dimg");
-    dimg.href = canvas.toDataURL('image/jpeg');
-    dimg.download = 'myDraw.jpeg';
-    dimg.click();
-    document.body.appendChild(dimg);
-*/
-
-/*
-function save(){    
-    console.log('export image');
-    if (!fabric.Canvas.supports('toDataURL')) {
-        alert('This browser doesn\'t provide means to serialize canvas to an image');
-        console.log('if');
-    }
-    else {
-        dimg = document.createElement("dimg");
-        dimg.href = canvas.toDataURL('image/jpeg');
-        dimg.download = 'myDraw.jpg';
-        dimg.click();
-        document.body.appendChild(dimg);
-        window.open(canvas.toDataURL('image/jpeg'));
-        console.log('else');
-    }
-}
-    var saveButton = document.getElementById("saveLink");
-    saveButton.addEventListener("click", saveImage, false);
-
-    function saveImage(e)
-    {
-        this.href = canvas.toDataURL({
-            format: 'png',
-            quality: 0.8
-        });
-        this.download = 'canvas.png'
-    }
-    */
 
 function yes()
 {
@@ -354,12 +314,14 @@ function no()
     {
         console.log('submit to server');
         const element = document.getElementById('target');
-        var str = '발전을 위해서 무엇을 그렸는지 알려주세요';
-        element.innerText = str;
-        //keyword를 입력받는게 필요함
-        var keyword = 'something';
-        var src = 'submit/' + keyword + '.png';
-        fabric.Canvas.supports(src);
+        var str;
+        if (lang == 'kr')
+            str = '<a href="mailto:pear1@ajou.ac.kr?subject=학습을 위한 데이터 제공">무엇을 그렸는지 메일로 알려주세요! </a>';
+        else if (lang == 'en')
+            str = '<a href="mailto:pear1@ajou.ac.kr?subject=Providing training data">Please mail to us and let us know what you drew</a>';
+        else if (lang == 'jp')
+            str = '<a href="mailto:pear1@ajou.ac.kr?subject=AIのための学習データの提供">描いたものをメールでお知らせください。M/a>';
+        element.innerHTML = str;
     }
     else check();
 }
