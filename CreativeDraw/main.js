@@ -375,7 +375,7 @@ function changeLanguage()
         trans_kr[en[i]]=ko[i];
     	}
 }*/
-/*
+
 function LoadTrans() 
 {    var ko = [];
      var en = [];
@@ -398,8 +398,8 @@ function LoadTrans()
         trans_kr[en[i]]=ko[i];
     	}
 }
-*/
-function LoadTrans() 
+
+/*function LoadTrans() 
 {
     readTextFile("translation_en.txt",en);
     readTextFile("translation_ko.txt",kr);
@@ -408,7 +408,7 @@ function LoadTrans()
 	{
         trans_kr[en[i]]=kr[i];
     	}
-}
+}*/
 
 function readTextFile(file, ln)
 {
@@ -423,7 +423,7 @@ function readTextFile(file, ln)
                 var allText = rawFile.responseText;
                 console.log(allText);
 		console.log(allText[1]);
-                if(ln == 'kr')
+                /*if(ln == 'kr')
                 {
                      //한국어를 파싱
                                  //trans_kr[trans_en[i]] = 값
@@ -431,7 +431,7 @@ function readTextFile(file, ln)
                 else if(ln == 'en')
                 {
                      //영어로 allText를 파싱 trans_en
-                }
+                }*/
 
             }
         }
