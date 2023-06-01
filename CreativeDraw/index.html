@@ -42,25 +42,34 @@
 
   <div class="tab">
     <div class="menu1">
- 	   <a href="https://www.instagram.com/_seotyle_/" target="_blank">Team</a>
+ 	   <a href="https://raw.githubusercontent.com/codepearl/codepearl.github.io/main/CreativeDraw/mini_classes.txt" target="_blank">Class</a>
     </div>
     <div class="menu2">
-	    <a href="https://www.instagram.com/_seotyle_/" target="_blank">Learning data</a>
+	    <a href="https://github.com/googlecreativelab/quickdraw-dataset" target="_blank">Learning data</a>
     </div>
     <div class="menu3">
-	    <a href="https://www.instagram.com/_seotyle_/" target="_blank">Github</a>
+	    <a href="https://github.com/codepearl/codepearl.github.io" target="_blank">Github</a>
     </div>
   </div>
 </nav>
 	  
 	  
-<div class="container-fluid"> 
+<div class="container-fluid" style ='margin-left:100px;margin-top:20px;'> 
 
-<blockquote class="blockquote text-justify" style="margin:30px;">
- <p> CNN을 통해서 <a href='https://raw.githubusercontent.com/codepearl/codepearl.github.io/main/CreativeDraw/mini_classes.txt'>100가지 종류</a>에 대해 예측할 수 있습니다. 구글의 <a href='https://github.com/googlecreativelab/quickdraw-dataset'>Quick, Draw! 데이터셋</a>을 이용하였고 가장 높은 일치도를 보이는 5개의 후보를 파이 그래프로 보여줍니다. </p>
-    <footer class="blockquote-footer">융합시스템공학과 3조</footer>
-  </blockquote>
+    <form>
+        <label>한국어</label>
+        <input type="radio" id="language" name="language" onclick="changeLanguage();" value="kr" checked/>
+        <label>English</label>
+        <input type="radio" id="language" name="language" onclick="changeLanguage();" value="en"/>
+        <label>日本語</label>
+        <input type="radio" id="language" name="language" onclick="changeLanguage();" value="jp"/>
+    </form>
+<br/><div id="target"> </div>
+<button type="button" class="btn btn-outline-primary" onclick ='yes()' style ='margin-left:10px;' disabled>Yes</button>
+<button type="button" class="btn btn-outline-primary" onclick ='no()' style ='margin-left:10px;' disabled>No</button>  
+</div><br/>
 </div>
+
 
 <div class="row">
 	<div class="col" style ='margin-left:100px;'>
@@ -79,18 +88,7 @@
 	</div>
 <div class="btn-group2" style = 'margin-top:40px; '>
 <!-- <a href="#" id="saveLink">Save</a> -->
-<br/> <div id="target"> </div>
-<button type="button" class="btn btn-outline-primary" onclick ='yes()' style ='margin-left:10px;' disabled>Yes</button>
-<button type="button" class="btn btn-outline-primary" onclick ='no()' style ='margin-left:10px;' disabled>No</button>
-    <form>
-        <label>한국어</label>
-        <input type="radio" id="language" name="language" onclick="changeLanguage();" value="kr" checked/>
-        <label>English</label>
-        <input type="radio" id="language" name="language" onclick="changeLanguage();" value="en"/>
-        <label>日本語</label>
-        <input type="radio" id="language" name="language" onclick="changeLanguage();" value="jp"/>
-    </form>
-    </div>  
+<br/>
 </div>
 	
   <div class="col">
