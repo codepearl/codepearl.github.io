@@ -347,6 +347,7 @@ function changeLanguage()
             i = radios.length;
         }
     }
+    readTextFile("translation_en.txt");
     //LoadTrans();
     const element = document.getElementById('target');
     var str;
@@ -380,19 +381,35 @@ function LoadTrans()
 	
 	koFile.onload = function (event) {
 		var koData = event.target.result; // 읽은 한국어 데이터
-		
+		console.log(koData[0]);
+		for (var i = 0; i < 100; i++) {
+			trans_kr[enData[i]] = koData[i];
+			}
 		};
 	
 	enFile.onload = function (event) {
 		var enData = event.target.result; // 읽은 영어 데이터
-		
+		koFile.readAsText('translation_ko.txt'); // 한국어 파일 읽기 시작
 		};
-	koFile.readAsText('translation_ko.txt');
-	enFile.readAsText('translation_en.txt');
-	console.log(koData);
-	for (var i = 0; i < 100; i++) {
-		trans_kr[enData[i]] = koData[i];
-		}
+	enFile.readAsText('translation_en.txt'); // 영어 파일 읽기 시작
 }
 
+
+function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                alert(allText);
+            }
+        }
+    }
+    rawFile.send(null);
+}
 
