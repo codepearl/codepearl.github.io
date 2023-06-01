@@ -399,14 +399,14 @@ function changeLanguage()
 //단어 번역
 function LoadTrans()
 {	
-	BufferedReader ko = new BufferedReader(
-        new FileReader('translation_ko.txt'),
+	BufferedReader reader = new BufferedReader(
+        new FileReader("translation_ko.txt", Charset.forName("UTF-8")),
         16 * 1024);
 	
 	String str;
 	for (var i=0; i<100; i++)
 	{
-	    str = ko.readLine();
+	    str = reader.readLine();
 	    trans_kr[en[i]]=str;
 	}
         
