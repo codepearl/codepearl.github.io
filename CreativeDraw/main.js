@@ -321,7 +321,7 @@ function no()
         else if (lang == 'en')
             str = '<a href="mailto:pear1@ajou.ac.kr?subject=Providing training data">Please mail to us and let us know what you drew</a>';
         else if (lang == 'jp')
-            str = '<a href="mailto:pear1@ajou.ac.kr?subject=AIのための学習データの提供">描いたものをメールでお知らせください。M/a>';
+            str = '<a href="mailto:pear1@ajou.ac.kr?subject=AIのための学習データの提供">描いたものをメールでお知らせください。</a>';
         element.innerHTML = str;
     }
     else check();
@@ -361,20 +361,6 @@ function changeLanguage()
     element.innerText = str;
 }
 //단어 번역
-/*function LoadTrans()
-{	
-	
-	var ko = new FileReader();
-	ko.readAsText('translation_ko.txt','ANSI');
-	console.log(ko[0]);
-	var en = new FileReader();
-	en.readAsText('translation_en.txt','ANSI');
-
-	for (var i=0; i<100; i++)
-	{
-        trans_kr[en[i]]=ko[i];
-    	}
-}*/
 
 function LoadTrans() 
 {    var ko = [];
