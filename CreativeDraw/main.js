@@ -15,6 +15,7 @@ var img;
 var trans_kr = {};
 var ko = [];
 
+
 function getRandomNumber(min, max) 
 {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -398,7 +399,7 @@ function changeLanguage()
 }
 //단어 번역
 function LoadTrans()
-{	
+{	public BufferedReader(Reader in, int sz);
 	BufferedReader reader = new BufferedReader(
         new FileReader("translation_ko.txt", Charset.forName("UTF-8")),
         16 * 1024);
