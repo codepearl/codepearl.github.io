@@ -402,7 +402,12 @@ function LoadTrans()
 function LoadTrans() 
 {
     readTextFile("translation_en.txt",en);
-    readTextFile("translation_kr.txt",kr);
+    readTextFile("translation_ko.txt",kr);
+	
+	for (var i=0; i<100; i++)
+	{
+        trans_kr[en[i]]=kr[i];
+    	}
 }
 
 function readTextFile(file, ln)
