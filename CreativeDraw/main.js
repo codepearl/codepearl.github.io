@@ -410,6 +410,7 @@ function LoadTrans()
 	    str = reader.readLine();
 	    trans_kr[en[i]]=str;
 	}*/
+	var path;
         Path path = Paths.get("translation_ko.txt");
     	List<String> lines = Files.readAllLines(path);
   	for(var i=0; i<100; i++) {
