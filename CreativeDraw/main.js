@@ -13,6 +13,7 @@ var lang;
 var yesNum = 0;
 var img;
 var trans_kr = {};
+var ko = [];
 
 function getRandomNumber(min, max) 
 {
