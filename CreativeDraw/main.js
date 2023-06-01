@@ -384,7 +384,7 @@ function changeLanguage()
             i = radios.length;
         }
     }
-	
+	LoadTrans();
     const element = document.getElementById('target');
     var str;
     if (lang == 'kr')
