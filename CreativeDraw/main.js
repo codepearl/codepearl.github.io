@@ -399,7 +399,7 @@ function changeLanguage()
 //단어 번역
 function LoadTrans()
 {	
-	/*BufferedReader ko = new BufferedReader(
+	BufferedReader ko = new BufferedReader(
         new FileReader("translation_ko.txt", Charset.forName("UTF-8")),
         16 * 1024);
 	
@@ -408,14 +408,14 @@ function LoadTrans()
 	{
 	    str = ko.readLine();
 	    trans_kr[en[i]]=str;
-	}*/
+	}
 	/*var path;
         Path path = Paths.get("translation_ko.txt");
     	List<String> lines = Files.readAllLines(path);
   	for(var i=0; i<100; i++) {
         trans_kr[en[i]]=lines[i];
 	}*/
-	var ko = new FileReader();
+	/*var ko = new FileReader();
 	ko.readAsText('translation_ko.txt');
 	console.log(ko[0]);
 	var en = new FileReader();
@@ -424,7 +424,7 @@ function LoadTrans()
 	for (var i=0; i<100; i++)
 	{
         trans_kr[en[i]]=ko[i];
-    }
+    	}*/
 }
 
 
