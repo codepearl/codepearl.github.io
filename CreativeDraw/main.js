@@ -371,10 +371,10 @@ function changeLanguage()
 function LoadTrans() 
 {    var ko = [];
      var en = [];
-     readTextFile("translation_en.txt",en);
-     readTextFile("translation_ko.txt",ko);
-     readTextFile("translation_ja.txt",ja);
-     readTextFile("translation_zh_ch.txt",ch);
+     readTextFile("translation_en.txt",'en');
+     readTextFile("translation_ko.txt",'ko');
+     readTextFile("translation_ja.txt",'ja');
+     readTextFile("translation_zh-ch.txt",'ch');
     /*var array = data.toString().split("\n");
     for (var i in array)
     {
