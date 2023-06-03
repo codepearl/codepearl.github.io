@@ -49,7 +49,7 @@ hamburger
 guitar
 horse
 house
-ice cream
+ice_cream
 key
 leg
 nose
@@ -72,14 +72,14 @@ snail
 spider
 pizza
 pool
-smiley face
+smiley_face
 square
 sun
 television
 telephone
 piano
 tooth
-see saw
+see_saw
 mushroom
 scissors
 toothbrush
@@ -89,7 +89,7 @@ pants
 panda
 carrot
 chair
-cell phone
+cell_phone
 bench
 rabbit
 tiger
