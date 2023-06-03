@@ -14,8 +14,12 @@ var yesNum = 0;
 var img;
 var trans_kr = {};
 var trans_en = {};
-var KoData = [];
-var EnData = [];
+var trans_ch = {};
+var trans_ja = {};
+var kodata = [];
+var endata = [];
+var jadata = [];
+var chdata = [];
 
 
 function getRandomNumber(min, max) 
@@ -367,8 +371,10 @@ function changeLanguage()
 function LoadTrans() 
 {    var ko = [];
      var en = [];
-     EnData=readTextFile("translation_en.txt");
-     KoData=readTextFile("translation_ko.txt");
+     readTextFile("translation_en.txt",en);
+     readTextFile("translation_ko.txt",ko);
+     readTextFile("translation_ja.txt",ja);
+     readTextFile("translation_zh_ch.txt",ch);
     /*var array = data.toString().split("\n");
     for (var i in array)
     {
@@ -399,35 +405,7 @@ function LoadTrans()
     	}
 }*/
 
-function readTextFile(file)
-{
-    var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file, false);
-    rawFile.onreadystatechange = function ()
-    {
-        if(rawFile.readyState === 4)
-        {
-            if(rawFile.status === 200 || rawFile.status == 0)
-            {
-                var allText = rawFile.responseText;
-                console.log(allText);
-		console.log(allText[1]);
-                /*if(ln == 'kr')
-                {
-                     //한국어를 파싱
-                                 //trans_kr[trans_en[i]] = 값
-                }
-                else if(ln == 'en')
-                {
-                     //영어로 allText를 파싱 trans_en
-                }*/
-
-            }
-        }
-    }
-    rawFile.send(null);
-}
-/*function readTextFile(file, ln)
+/*function readTextFile(file)
 {
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", file, false);
@@ -455,3 +433,50 @@ function readTextFile(file)
     }
     rawFile.send(null);
 }*/
+function readTextFile(file, ln)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                console.log(allText);
+		console.log(allText[1]);
+                if(ln == 'ko')
+                {
+                     for (var i=0; i<100; i++)
+			{
+			kodata[i]=alldata[i];
+    			}
+                }
+                else if(ln == 'en')
+                {
+                     for (var i=0; i<100; i++)
+			{
+			endata[i]=alldata[i];
+    			}
+                }
+		else if(ln == 'ja')
+                {
+                     for (var i=0; i<100; i++)
+			{
+			jadata[i]=alldata[i];
+    			}
+                }
+		else if(ln == 'ch')
+                {
+                     for (var i=0; i<100; i++)
+			{
+			chdata[i]=alldata[i];
+    			}
+                }
+
+            }
+        }
+    }
+    rawFile.send(null);
+}
