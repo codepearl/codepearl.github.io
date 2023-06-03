@@ -371,10 +371,23 @@ function changeLanguage()
 function LoadTrans() 
 {    var ko = [];
      var en = [];
+     var ja = [];
+     var ch = [];
      readTextFile("translation_en.txt",'en');
      readTextFile("translation_ko.txt",'ko');
      readTextFile("translation_ja.txt",'ja');
      readTextFile("translation_zh-ch.txt",'ch');
+     ko = kodata.split("\r\n");
+     en = endata.split("\r\n");
+     ja = jadata.split("\r\n");
+     ch = chdata.split("\r\n");
+ 	for (var i=0; i<100; i++)
+	{
+        	trans_kr[en[i]] = ko[i];
+		trans_ja[en[i]] = ja[i];
+		trans_ch[en[i]] = ch[i];
+		trans_en[en[i]] = en[i];
+    	}
     /*var array = data.toString().split("\n");
     for (var i in array)
     {
@@ -388,10 +401,7 @@ function LoadTrans()
     {
         ko[i] = array[i];
     }
-    for (var i=0; i<100; i++)
-	{
-        trans_kr[en[i]]=ko[i];
-    	}*/
+    */
 }
 
 /*function LoadTrans() 
