@@ -21,7 +21,7 @@ var endata = [];
 var jadata = [];
 var chdata = [];
 
-
+LoadTrans();
 function getRandomNumber(min, max) 
 {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -113,7 +113,7 @@ function getImageData()
 }
 
 function getFrame()
-{    LoadTrans();
+{    
     if (coords.length >= 2)
     {
         //canvas에서 이미지 데이터 가져오기
