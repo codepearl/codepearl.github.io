@@ -113,7 +113,7 @@ function getImageData()
 }
 
 function getFrame()
-{
+{    LoadTrans();
     if (coords.length >= 2)
     {
         //canvas에서 이미지 데이터 가져오기
@@ -355,7 +355,6 @@ function changeLanguage()
         }
     }
     
-    LoadTrans();
     const element = document.getElementById('target');
     var str;
     if (lang == 'kr')
