@@ -60,13 +60,13 @@ function setTable(top5, probs)
     {
         let sym = document.getElementById('sym' + (i + 1))
         let prob = document.getElementById('prob' + (i + 1))
-        if(lang = 'kr'){
+        if(lang == 'kr'){
         sym.innerHTML = trans_kr[top5[i]]
         }
-        else if(lang = 'en'){
+        else if(lang == 'en'){
         sym.innerHTML = trans_en[top5[i]]
         }
-        else if(lang = 'jp'){
+        else if(lang == 'jp'){
         sym.innerHTML = trans_ja[top5[i]]
         }
         prob.innerHTML = Math.round(probs[i] * 100)
