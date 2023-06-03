@@ -21,7 +21,7 @@ table
 pool
 hat
 camera
-smiley face
+smiley_face
 fish
 cookie
 baseball
@@ -48,7 +48,7 @@ whale
 panda
 foot
 flower
-ice cream
+ice_cream
 tiger
 scissors
 diamond
@@ -68,7 +68,7 @@ cow
 star
 cactus
 toe
-cell phone
+cell_phone
 toothbrush
 train
 donut
@@ -78,7 +78,7 @@ rabbit
 guitar
 bench
 angel
-see saw
+see_saw
 ear
 piano
 banana
