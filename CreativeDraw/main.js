@@ -14,6 +14,8 @@ var yesNum = 0;
 var img;
 var trans_kr = {};
 var trans_en = {};
+var KoData = [];
+var EnData = [];
 
 
 function getRandomNumber(min, max) 
@@ -365,8 +367,9 @@ function changeLanguage()
 function LoadTrans() 
 {    var ko = [];
      var en = [];
-    var data=readTextFile("translation_en.txt");
-    var array = data.toString().split("\n");
+     Endata=readTextFile("translation_en.txt");
+     Kodata=readTextFile("translation_ko.txt");
+    /*var array = data.toString().split("\n");
     for (var i in array)
     {
         en[i] = array[i];
@@ -382,7 +385,7 @@ function LoadTrans()
     for (var i=0; i<100; i++)
 	{
         trans_kr[en[i]]=ko[i];
-    	}
+    	}*/
 }
 
 /*function LoadTrans() 
