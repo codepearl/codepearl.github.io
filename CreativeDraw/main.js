@@ -355,7 +355,7 @@ function changeLanguage()
         }
     }
     
-    //LoadTrans();
+    LoadTrans();
     const element = document.getElementById('target');
     var str;
     if (lang == 'kr')
@@ -363,7 +363,7 @@ function changeLanguage()
     else if (lang == 'en')
         str = 'Is the ' + selected + ' you drew right?' ;
     else if (lang == 'jp')
-        str = '今描いたのは' + selected + 'が正しいですか?'
+        str = '今描いたのは' + trans_ja[selected] + 'が正しいですか?'
     element.innerText = str;
 }
 //단어 번역
@@ -388,61 +388,9 @@ function LoadTrans()
 		trans_ch[en[i]] = ch[i];
 		trans_en[en[i]] = en[i];
     	}
-    /*var array = data.toString().split("\n");
-    for (var i in array)
-    {
-        en[i] = array[i];
-    }
- 	console.log(en[0]);
- 	console.log(en[1]);
-    var data=readTextFile("translation_ko.txt");
-    var array = data.toString().split("\n");
-    for (var i in array)
-    {
-        ko[i] = array[i];
-    }
-    */
 }
 
-/*function LoadTrans() 
-{
-    readTextFile("translation_en.txt",en);
-    readTextFile("translation_ko.txt",kr);
-	
-	for (var i=0; i<100; i++)
-	{
-        trans_kr[en[i]]=kr[i];
-    	}
-}*/
 
-/*function readTextFile(file)
-{
-    var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file, false);
-    rawFile.onreadystatechange = function ()
-    {
-        if(rawFile.readyState === 4)
-        {
-            if(rawFile.status === 200 || rawFile.status == 0)
-            {
-                var allText = rawFile.responseText;
-                console.log(allText);
-		console.log(allText[1]);
-                if(ln == 'kr')
-                {
-                     //한국어를 파싱
-                                 //trans_kr[trans_en[i]] = 값
-                }
-                else if(ln == 'en')
-                {
-                     //영어로 allText를 파싱 trans_en
-                }
-
-            }
-        }
-    }
-    rawFile.send(null);
-}*/
 function readTextFile(file, ln)
 {
     var rawFile = new XMLHttpRequest();
@@ -454,8 +402,7 @@ function readTextFile(file, ln)
             if(rawFile.status === 200 || rawFile.status == 0)
             {
                 var allText = rawFile.responseText;
-                console.log(allText);
-		console.log(allText[1]);
+
                 if(ln == 'ko')
 		{
 			kodata=allText;
