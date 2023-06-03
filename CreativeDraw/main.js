@@ -367,8 +367,8 @@ function changeLanguage()
 function LoadTrans() 
 {    var ko = [];
      var en = [];
-     Endata=readTextFile("translation_en.txt");
-     Kodata=readTextFile("translation_ko.txt");
+     EnData=readTextFile("translation_en.txt");
+     KoData=readTextFile("translation_ko.txt");
     /*var array = data.toString().split("\n");
     for (var i in array)
     {
