@@ -447,32 +447,20 @@ function readTextFile(file, ln)
                 console.log(allText);
 		console.log(allText[1]);
                 if(ln == 'ko')
-                {
-                     for (var i=0; i<100; i++)
-			{
-			kodata[i]=alldata[i];
-    			}
+		{
+			kodata=allText;
                 }
                 else if(ln == 'en')
                 {
-                     for (var i=0; i<100; i++)
-			{
-			endata[i]=alldata[i];
-    			}
+			endata=allText;
                 }
 		else if(ln == 'ja')
                 {
-                     for (var i=0; i<100; i++)
-			{
-			jadata[i]=alldata[i];
-    			}
+			jadata=allText;
                 }
 		else if(ln == 'ch')
                 {
-                     for (var i=0; i<100; i++)
-			{
-			chdata[i]=alldata[i];
-    			}
+			chdata=allText;
                 }
 
             }
