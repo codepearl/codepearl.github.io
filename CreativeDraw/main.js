@@ -227,8 +227,7 @@ async function start(cur_mode)
 function allowDrawing()
 {
     canvas.isDrawingMode = 1;
-    document.getElementById('status').innerHTML = '그림을 그려주세요.';
-    document.getElementById('status').innerHTML = 'style=margin-left:550px;margin-top:-37px;">AI가 그림을 다시 그려줍니다.';
+    document.getElementById('status').innerHTML = '그림을 그려주세요.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AI가 그림을 다시 그려줍니다.';
     $('button').prop('disabled', false);
     var slider = document.getElementById('myRange');
     slider.oninput = function()
