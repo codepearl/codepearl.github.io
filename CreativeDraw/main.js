@@ -257,7 +257,7 @@ function save()
         link.href = dataURL;
         link.download = "myImage.png";
         link.click();
-
+/*
         // 서버로 이미지를 전송하여 저장
         var serverURL = "서버 주소"; // 실제 서버 주소로 변경해야 함
         fetch(serverURL, {
@@ -280,6 +280,7 @@ function save()
             console.error("오류 발생:", error);
           });
       });
+*/
 }
 
 function yes()
