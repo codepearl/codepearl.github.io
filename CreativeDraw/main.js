@@ -278,9 +278,9 @@ function save()
           })
           .catch(function (error) {
             console.error("오류 발생:", error);
-          });
+          });*/
       });
-*/
+
 }
 
 function yes()
