@@ -248,37 +248,13 @@ function save()
     var canvas = document.getElementById("canvas");
     var saveButton = document.getElementById("saveLink");
 
-      saveButton.addEventListener("click", function () {
-        // 캔버스의 이미지를 데이터 URL로 가져옴
+      saveButton.addEventListener("click", function () {  
         var dataURL = canvas.toDataURL("image/png");
-
-        // 사용자의 PC에 이미지 저장
+      
         var link = document.createElement("a");
         link.href = dataURL;
         link.download = "myImage.png";
         link.click();
-/*
-        // 서버로 이미지를 전송하여 저장
-        var serverURL = "서버 주소"; // 실제 서버 주소로 변경해야 함
-        fetch(serverURL, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            image: dataURL,
-          }),
-        })
-          .then(function (response) {
-            if (response.ok) {
-              alert("그림이 성공적으로 서버에 저장되었습니다.");
-            } else {
-              alert("그림 저장에 실패했습니다.");
-            }
-          })
-          .catch(function (error) {
-            console.error("오류 발생:", error);
-          });*/
       });
 
 }
