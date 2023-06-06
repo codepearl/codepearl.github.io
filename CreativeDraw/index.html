@@ -2,23 +2,18 @@
 <head>
 <meta charset="UTF-8" />
 <link	rel="shortcut icon" type="image/png" sizes="32x32" href="https://codepearl.github.io/CreativeDraw/img/penee.png">
-<title>융합종합설계 3조</title>
-
+<title>융합종합설계 3조 서경수</title>
 <!-- bs4 css -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
 	
 <!-- css pie -->
 <link rel="stylesheet" href="pie.css">
-
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 <!-- Popper JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-
 <!-- TensorFlow.js script -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script> -->
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
@@ -28,18 +23,15 @@
 	
 <!-- main script -->
 <script src = "main.js" > </script>
-
 <!-- main css -->
 <link rel = "stylesheet" href="main.css" > 
 	
 </head>
 <body>
-
 <nav class="navbar navbar-expand-sm bg-light navbar-light">
   <!-- Brand/logo -->
   <a class="navbar-brand" href="#"><h1>Catch me If you can<small></small></h1></a>
   <footer class="nav-footer" style="margin-left:400px;margin-right:300px;"><h2>융합시스템공학과 3조<h2></footer>	
-
   <div class="tab">
     <div class="menu1">
  	   <a href="https://raw.githubusercontent.com/codepearl/codepearl.github.io/main/CreativeDraw/mini_classes.txt" target="_blank">Class</a>
@@ -55,30 +47,13 @@
 	  
 	  
 <div class="container-fluid" style ='margin-left:100px;margin-top:20px;'> 
-
 </div>
-
-
 <div class="row">
 	<div class="col" style ='margin-left:100px;'>
 		<h4 id ='status' >Loading Model... </h4> 
 		<h4 id ='status' style=margin-left:550px;margin-top:-35px;">          </h4>
 		<canvas id="canvas" width="450" height="450" class="canvas" style="border:1px solid #b9bfc9;margin-top:35px;margin-bottom: 20px;"></canvas>
-		<canvas id="canvas" width="450" height="450" class="canvas" style="border:1px solid #b9bfc9;margin-left:550px;margin-top:-415px;margin-bottom: 20px;margin-right:0px;"></canvas>
-		
-		<div id="target" style="margin-left:1350px;margin-top:-415px;"> </div>
-		<button type="button" class="btn btn-outline-primary" onclick ='yes()' style ='margin-left:0px;' disabled>Yes</button>
-	        <button type="button" class="btn btn-outline-primary" onclick ='no()' disabled>No</button>  			
-	        <form>
-			<label style="margin-left:1350px;margin-top:-1015px;"  >한국어</label>
-			<input type="radio" id="language" name="language" onclick="changeLanguage();" value="kr" checked/>
-			<label>English</label>
-			<input type="radio" id="language" name="language" onclick="changeLanguage();" value="en"/>
-			<label>日本語</label>
-			<input type="radio" id="language" name="language" onclick="changeLanguage();" value="jp"/>
-	       </form>
-		
-		
+		<canvas id="canvas" width="450" height="450" class="canvas" style="border:1px solid #b9bfc9;margin-left:550px;margin-top:-415px;margin-bottom: 20px;margin-right:100px;">결과창</canvas>
 		<div class="btn-group" style = 'margin-top:10px; '>
 			<input type="range" min="5" max="20" value="10" class="slider" id="myRange" style ='margin-left:70px;margin-top:20px;margin-right:20px;'>
 			<button type="button" class="btn btn-outline-primary" id="saveLink"><img src="https://codepearl.github.io/CreativeDraw/img/save.jpg" width="30" height="35"></button>
@@ -87,12 +62,11 @@
 		<div class="text-group" style = 'margin-top:40px; '>
 	</div>
 </div>
-       
-				       
+
   <div class="col">
     <section style="margin-top:120px;">
     <div class="pieID pie">
-      
+
     </div>
     <ul class="pieID legend">
       <li>
@@ -121,7 +95,17 @@
 </div>  
 	  
 	  
-
+    <form>
+        <label style="margin-left:1350px;margin-top:-1015px;"  >한국어</label>
+        <input type="radio" id="language" name="language" onclick="changeLanguage();" value="kr" checked/>
+        <label>English</label>
+        <input type="radio" id="language" name="language" onclick="changeLanguage();" value="en"/>
+        <label>日本語</label>
+        <input type="radio" id="language" name="language" onclick="changeLanguage();" value="jp"/>
+    </form>	
+    <br/><div id="target" style="margin-left:1350px;"> </div>
+    <button type="button" class="btn btn-outline-primary" onclick ='yes()' style ='margin-left:1350px;' disabled>Yes</button>
+    <button type="button" class="btn btn-outline-primary" onclick ='no()' disabled>No</button>  
 	
 <!-- Footer Section-->
 <footer class="footerSection">
@@ -133,9 +117,9 @@
 	
     <div id="footerSocialIcon">
 	<a href="https://www.instagram.com/_seotyle_/" target="_blank"><img src="https://codepearl.github.io/CreativeDraw/img/instagram-icon.jpg"></a>
-	<a href="https://github.com/codepearl/codepearl.github.io/tree/main/CreativeDraw" target="_blank"><img src="https://codepearl.github.io/CreativeDraw/img/facebook-icon.png"></a>
-	<a href="https://github.com/codepearl/codepearl.github.io/tree/main/CreativeDraw" target="_blank"><img src="https://codepearl.github.io/CreativeDraw/img/twitter-icon.png"></a>
-	<a href="https://github.com/codepearl/codepearl.github.io/tree/main/CreativeDraw" target="_blank"><img src="https://codepearl.github.io/CreativeDraw/img/github-icon.jpg"></a>
+	<a href="https://www.instagram.com/_seotyle_/" target="_blank"><img src="https://codepearl.github.io/CreativeDraw/img/facebook-icon.png"></a>
+	<a href="https://www.instagram.com/_seotyle_/" target="_blank"><img src="https://codepearl.github.io/CreativeDraw/img/twitter-icon.png"></a>
+	<a href="https://www.instagram.com/_seotyle_/" target="_blank"><img src="https://codepearl.github.io/CreativeDraw/img/github-icon.jpg"></a>
     </div>
 	
     <div id="footerCenter">
@@ -145,7 +129,6 @@
 	<p><span>Web:</span>codepearl.github.io/CreativeDraw/</p>
 	<p><span>Adress:</span>경기도 수원시 영통구 월드컵로 206</p>
     </div>
-
     <div id="footerRight">
 	<h3>About Us</h3>
 	<p>♥ 박진주 (202020648) 박찬우 (202020620) ♥ <br/>♥ 박윤우 (202020650) 서경수 (202020641) ♥<br/>♥ 성원기 (202020627) 이준영 (201920632) ♥</p>
